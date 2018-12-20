@@ -1,0 +1,130 @@
+#: kivy 1.9.0
+
+<LoginScreen>:
+    canvas.before:
+        Color:
+            rgba: (0,1,4,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Label:
+        text: "REGISTRASI"
+        color: (0,0,0,1)
+        font_size: 50
+        center_x: root.width * 0.5
+        center_y: root.top * 0.9
+    Label:
+        id: fnama_label
+        text: "Nama Depan"
+        color: (0,0,0,1)
+        font_size: 30
+        right: fnama_input.x - 100
+        center_y: root.top * 0.8
+    TextInput:
+        id: fnama_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.8
+        height: 35
+        width: 300
+	Label:
+        id: lnama_label
+        text: "Nama Belakang"
+        color: (0,0,0,1)
+        font_size: 30
+        right: lnama_input.x - 100
+        center_y: root.top * 0.7
+    TextInput:
+        id: lnama_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.7
+        height: 35
+        width: 300
+	Label:
+        id: no_label
+        text: "No. Hp"
+        color: (0,0,0,1)
+        font_size: 30
+        right: no_input.x - 100
+        center_y: root.top * 0.6
+    TextInput:
+        id: no_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.6
+        height: 35
+        width: 300
+	Label:
+        id: email_label
+        text: "Email"
+        color: (0,0,0,1)
+        font_size: 30
+        right: email_input.x - 100
+        center_y: root.top * 0.5
+    TextInput:
+        id: email_input
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.5
+        height: 35
+        width: 300
+    Label:
+        id: password_label
+        text: "Buat Password"
+        color: (0,0,0,1)
+        font_size: 30
+        right: password_input.x - 100
+        center_y: root.top * 0.4
+    TextInput:
+        id: password_input
+        font_size: 20
+        password: True
+        center_x: root.width * 0.5
+        center_y: root.top * 0.4
+        height: 35
+        width: 300
+	Label:
+        id: passwordk_label
+        text: "Tulis ulang Password"
+        color: (0,0,0,1)
+        font_size: 30
+        right: passwordk_input.x - 100
+        center_y: root.top * 0.3
+    TextInput:
+        id: passwordk_input
+        font_size: 20
+        password: True
+        center_x: root.width * 0.5
+        center_y: root.top * 0.3
+        height: 35
+        width: 300
+    Button:
+        id: regist_button
+        font_size: 20
+        center_x: root.width * 0.7
+        center_y: root.top * 0.15
+        text: "Login"
+        size: (150,100)
+        on_press: root.login()
+	Button:
+        id: submit_button
+        font_size: 20
+        center_x: root.width * 0.5
+        center_y: root.top * 0.15
+        text: "Submit"
+        size: (150,100)
+        on_press: root.login()
+	Button:
+        id: login_button
+        font_size: 20
+        center_x: root.width * 0.3
+        center_y: root.top * 0.15
+        text: "Clear"
+        size: (150,100)
+        on_press: root.login()
+	Label:
+        id: success
+        pos: (100,100)
+        color: (0,0,0,1)
+        text: "Harap Melengkapi Data Diri Anda"
